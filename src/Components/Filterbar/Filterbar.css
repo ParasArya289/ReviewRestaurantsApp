@@ -10,3 +10,6 @@
 .filterbar-btn:hover {
     background-color: var(--hover-color);
 }
+.filterbar{
+  margin-bottom: 50px;
+}

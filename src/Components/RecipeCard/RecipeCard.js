@@ -1,4 +1,3 @@
-import { Cross1Icon, CrossCircledIcon, Pencil1Icon } from "react-icons/rx";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import "./RecipeCard.css";
@@ -19,10 +18,10 @@ export const RecipeCard = ({ recipe }) => {
             />
           )}
           <div className="recipecard-icon-container">
-            <EditModal recipe={recipe}>
+            {/* <EditModal recipe={recipe}>
               <Pencil1Icon />
             </EditModal>
-            <CrossCircledIcon onClick={deleteRecipeHandler} />
+            <CrossCircledIcon onClick={deleteRecipeHandler} /> */}
           </div>
         </div>
       </div>
