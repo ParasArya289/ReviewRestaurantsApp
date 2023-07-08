@@ -1,10 +1,12 @@
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import AddReviewDialogBox from "../../Components/AddReviewDialogBox/AddReviewDialogBox";
 import { useData } from "../../Context/dataContext";
 import "./Restraunt.css";
+import {RxArrowLeft} from "react-icons/rx";
 
 export const Restraunt = () => {
   const { restrauntId } = useParams();
+  const navigate = useNavigate();
   const {
     dataState: { restaurantsData },
   } = useData();
@@ -15,6 +17,9 @@ export const Restraunt = () => {
 
   return (
     <div className="restaurant">
+      <div className="restaurant-back" onClick={()=>navigate("/")}>
+        <RxArrowLeft/>
+      </div>
       <div className="restaurant-container">
         <div className="restaurant-container-info-container">
           <div className="restaurant-container-info">

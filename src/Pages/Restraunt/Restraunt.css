@@ -3,6 +3,13 @@
   margin: 50px auto;
   text-align: left;
 }
+.restaurant-back{
+  font-size: large;
+}
+.restaurant-back:hover{
+  color:var(--accent-color)
+}
+
 .restaurant-container-info > h1 {
   margin-bottom: 0;
 
