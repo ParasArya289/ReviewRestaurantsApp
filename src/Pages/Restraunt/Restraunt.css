@@ -3,28 +3,30 @@
   margin: 50px auto;
   text-align: left;
 }
-.restaurant-container-info > h1{
-    line-height: 0.5;
-    font-weight: var(--fw-medium);
+.restaurant-container-info > h1 {
+  margin-bottom: 0;
+
+  font-weight: var(--fw-medium);
 }
 .restaurant-container-info > p {
-    word-wrap: break-word;
-    line-height: 0.4;
-    color:var(--secondary-text-color)
+  word-wrap: break-word;
+  margin-bottom: 0;
+
+  color: var(--secondary-text-color);
 }
-.restaurant-container-info-container{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.restaurant-container-info-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
-.restaurant-container-action > button{
-    border:none;
-    border-radius: 6px;
-    padding:10px 20px;
-    color:var(--primary-color);
-    background-color:var(--accent-color)
+.restaurant-container-action > button {
+  border: none;
+  border-radius: 6px;
+  padding: 10px 20px;
+  color: var(--primary-color);
+  background-color: var(--accent-color);
 }
-.restaurant-container-action > button:hover{
+.restaurant-container-action > button:hover {
   background-color: var(--hover-color);
 }
 .restaurant-container-review {
@@ -38,7 +40,8 @@
   width: 40px;
 }
 .review-user > p {
-  line-height: 0.2;
+  /* line-height: 0.2; */
+  margin-bottom: 0;
   word-wrap: break-word;
 }
 .review-user-header {

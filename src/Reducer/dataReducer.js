@@ -14,5 +14,11 @@ export const dataReducer = (state, action) => {
         ...state,
         filteredData: [...action.payload],
       };
+    case "INIT_ADD_REVIEW":
+      const addReview = state?.restaurantsData?.map((rst)=>+rst?.id === +action.payload?.id?{...rst,ratings:[action.payload?.review,...rst?.ratings]}:rst)
+      return{
+        ...state,
+        restaurantsData:addReview
+      }
   }
 };

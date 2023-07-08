@@ -24,7 +24,7 @@ export const Restraunt = () => {
             <p> Average rating: {"3.3"}</p>
           </div>
 
-          <AddReviewDialogBox>
+          <AddReviewDialogBox rstId={restrauntId}>
             <div className="restaurant-container-action">
               <button>Add Review</button>
             </div>

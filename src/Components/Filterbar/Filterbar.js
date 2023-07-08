@@ -7,10 +7,13 @@ import "./Filterbar.css";
 export const Filterbar = () => {
   const [currentCuisine, setCurrentCuisine] = useState("");
   console.log(currentCuisine)
-  const { dispatchData } = useData();
+  const {dataState:{restaurantsData}, dispatchData } = useData();
+
   useEffect(() => {
-    filterData(currentCuisine, dispatchData);
+    filterData(restaurantsData,currentCuisine, dispatchData);
+
   }, [currentCuisine]);
+  
   return (
     <div className="filterbar">
       <h3>Select Your Cuisine</h3>

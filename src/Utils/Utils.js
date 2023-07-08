@@ -1,6 +1,4 @@
-import { restaurantsData } from "../db";
-
-export const filterData = (cusineId, dispatch) => {
+export const filterData = (restaurantsData,cusineId, dispatch) => {
   let filteredArr = [];
   if (cusineId) {
     filteredArr = restaurantsData?.filter(
