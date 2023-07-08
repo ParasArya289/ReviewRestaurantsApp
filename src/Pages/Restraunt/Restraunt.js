@@ -1,4 +1,5 @@
 import { useParams } from "react-router-dom";
+import AddReviewDialogBox from "../../Components/AddReviewDialogBox/AddReviewDialogBox";
 import { useData } from "../../Context/dataContext";
 import "./Restraunt.css";
 
@@ -23,10 +24,11 @@ export const Restraunt = () => {
             <p> Average rating: {"3.3"}</p>
           </div>
 
-          <div className="restaurant-container-action">
-            <button>Add Review</button>
-          </div>
-          
+          <AddReviewDialogBox>
+            <div className="restaurant-container-action">
+              <button>Add Review</button>
+            </div>
+          </AddReviewDialogBox>
         </div>
         <hr />
 
