@@ -1,10 +1,14 @@
-
-import './App.css';
+import { Route, Routes } from "react-router-dom";
+import "./App.css";
+import { Home } from "./Pages/Home/Home";
 
 function App() {
   return (
     <div className="App">
-      <h1>This is MCR 6</h1>
+      <h1>Food Ordering App</h1>
+      <Routes>
+        <Route path="/" element={<Home />} />
+      </Routes>
     </div>
   );
 }
