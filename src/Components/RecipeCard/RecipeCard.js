@@ -1,12 +1,12 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "./RecipeCard.css";
 
 export const RecipeCard = ({ recipe }) => {
-  console.log(recipe)
   const [imageLoading, setImageLoading] = useState(true);
+  const navigate = useNavigate();
   return (
-    <div className="recipecard">
+    <div className="recipecard" onClick={()=>navigate("/restraunt/"+ recipe?.rstId)}>
       <div className="recipecard-header">
         <div className="recipecard-img-container">
           {recipe?.imgSrc && (

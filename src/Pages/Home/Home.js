@@ -10,6 +10,7 @@ export const Home = () => {
   
   return (
     <div className="home">
+      <h1>Food Ordering App</h1>
       <Filterbar />
       {filteredData?.map((restraunt) => {
         return (
@@ -19,7 +20,7 @@ export const Home = () => {
             </h2>
             <div className="home-recipe-container">
               {restraunt?.menu?.map((recipe) => (
-                <RecipeCard recipe={{ ...recipe, rstName: restraunt?.name }} />
+                <RecipeCard recipe={{ ...recipe, rstName: restraunt?.name,rstId:restraunt?.id }}/>
               ))}
             </div>
           </>
