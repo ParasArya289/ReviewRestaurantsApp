@@ -17,7 +17,7 @@
 }
 .restaurant-container-info > p {
   word-wrap: break-word;
-  margin-bottom: 0;
+  margin:0;
 
   color: var(--secondary-text-color);
 }

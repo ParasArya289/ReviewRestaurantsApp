@@ -3,6 +3,7 @@ import AddReviewDialogBox from "../../Components/AddReviewDialogBox/AddReviewDia
 import { useData } from "../../Context/dataContext";
 import "./Restraunt.css";
 import {RxArrowLeft} from "react-icons/rx";
+import {RxStar} from "react-icons/rx";
 
 export const Restraunt = () => {
   const { restrauntId } = useParams();
@@ -24,9 +25,10 @@ export const Restraunt = () => {
         <div className="restaurant-container-info-container">
           <div className="restaurant-container-info">
             <h1>{foundRestaurant?.name}</h1>
+            <p>{foundRestaurant?.description}</p>
             <p>{foundRestaurant?.address}</p>
             <p>{foundRestaurant?.phone}</p>
-            <p> Average rating: {"3.3"}</p>
+            <p> Average rating: {foundRestaurant?.averageRating}</p>
           </div>
 
           <AddReviewDialogBox rstId={restrauntId}>

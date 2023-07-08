@@ -15,10 +15,18 @@ export const dataReducer = (state, action) => {
         filteredData: [...action.payload],
       };
     case "INIT_ADD_REVIEW":
-      const addReview = state?.restaurantsData?.map((rst)=>+rst?.id === +action.payload?.id?{...rst,ratings:[action.payload?.review,...rst?.ratings]}:rst)
-      return{
+      const addReview = state?.restaurantsData?.map((rst) =>
+        +rst?.id === +action.payload?.id
+          ? {
+              ...rst,
+              ratings: [action.payload?.review, ...rst?.ratings],
+              averageRating: ((rst?.averageRating+ action?.payload?.review?.rating)/rst?.ratings?.length+1).toFixed(2)
+            }
+          : rst
+      );
+      return {
         ...state,
-        restaurantsData:addReview
-      }
+        restaurantsData: addReview,
+      };
   }
 };
