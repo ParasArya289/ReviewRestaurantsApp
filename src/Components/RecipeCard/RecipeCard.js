@@ -3,16 +3,17 @@ import { Link } from "react-router-dom";
 import "./RecipeCard.css";
 
 export const RecipeCard = ({ recipe }) => {
+  console.log(recipe)
   const [imageLoading, setImageLoading] = useState(true);
   return (
     <div className="recipecard">
       <div className="recipecard-header">
         <div className="recipecard-img-container">
-          {recipe?.image && (
+          {recipe?.imgSrc && (
             <img
-              src={recipe?.image}
+              src={recipe?.imgSrc}
               style={{
-                visibility: recipe?.image && imageLoading ? "hidden" : "",
+                visibility: recipe?.imgSrc && imageLoading ? "hidden" : "",
               }}
               onLoad={() => setImageLoading(false)}
             />
@@ -28,16 +29,10 @@ export const RecipeCard = ({ recipe }) => {
       <div className="recipecard-info">
         <h4>{recipe?.name}</h4>
         <div>
-          <span>Cuisine Type</span>
-          <span>{recipe?.type}</span>
+          <span>Rs.{recipe?.price} for {recipe?.qty}</span>
         </div>
         <div>
-          <span>Ingredients</span>
-          <Link to={`/recipe/${recipe?.id}`}>{"view >"}</Link>
-        </div>
-        <div>
-          <span>Instruction</span>
-          <Link to={`/recipe/${recipe?.id}`}>{"view >"}</Link>
+          <span>{recipe?.rstName}</span>
         </div>
       </div>
     </div>

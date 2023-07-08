@@ -6,17 +6,18 @@
   border-radius: 10px;
   color: var(--primary-text-color);
   text-align: left;
-  box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.05);
+  box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.1);
 }
 .recipecard-img-container {
   position: relative;
   height: 200px;
+  border-radius: 4px;
   background-color: var(--hover-color);
 }
 .recipecard-img-container > img {
   height: 100%;
   width: 100%;
-  border-radius: 6px;
+  border-radius: 4px;
   object-fit: cover;
 }
 .recipecard-icon-container {
@@ -29,14 +30,11 @@
   gap: 5px;
   cursor: pointer;
 }
-
+.recipecard-info >h4{
+  margin-block:5px
+}
 .recipecard-info > div {
   display: flex;
   font-size: small;
-  justify-content: space-between;
-}
-.recipecard-info a {
-  text-decoration: none;
-  color: var(--accent-color);
-  color: var(--accent-color);
+  color:var(--secondary-text-color)
 }

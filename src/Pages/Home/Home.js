@@ -7,17 +7,19 @@ export const Home = () => {
   const {
     dataState: { filteredData },
   } = useData();
-  console.log(filteredData);
+  
   return (
     <div className="home">
       <Filterbar />
       {filteredData?.map((restraunt) => {
         return (
           <>
-            <h2>Dishes By <span>{restraunt?.name}</span></h2>
+            <h2>
+              Dishes By <span>{restraunt?.name}</span>
+            </h2>
             <div className="home-recipe-container">
-              {restraunt?.menu?.map(({ recipe }) => (
-                <RecipeCard recipe={recipe} />
+              {restraunt?.menu?.map((recipe) => (
+                <RecipeCard recipe={{ ...recipe, rstName: restraunt?.name }} />
               ))}
             </div>
           </>
